@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>Chat</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script type="text/javascript"
+          src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" type="text/css"
+        href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.1.4/sockjs.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+</head>
+<body>
+<div class="container py-5 px-4">
+  <div id="userLogin">
+    <form id="usernameForm">
+      <input id="name" type="text" placeholder="username" aria-describedby="button-addon2"
+             class="form-control rounded-0 border-0 py-4 bg-light">
+      <div class="input-group-append">
+        <button type="submit" class="btn">
+          <i class="fa fa-paper-plane"></i>
+        </button>
+      </div>
+    </form>
+  </div>
+  <!-- For demo purpose-->
+
+  <div class="row rounded-lg overflow-hidden shadow" id="messanger" style="display: none">
+    <!-- Users box-->
+    <div class="col-5 px-0">
+      <div class="bg-white">
+
+        <div class="bg-gray px-4 py-2 bg-light">
+          <p class="h5 mb-0 py-1">
+          <form id="new_message_form">
+            <input type="text"
+                   placeholder="Имя нового пользователя" aria-describedby="button-addon2"
+                   class="form-control rounded-0 border-0 py-4 bg-light"
+                   id="new_message"
+                   autocomplete="off"/>
+            <button id="new_message_send" style="display: none" type="submit" class="btn btn-link">
+              <i class="fa fa-paper-plane"></i></button>
+          </form>
+          </p>
+        </div>
+
+        <div class="messages-box" id="all_chats">
+          <div class="list-group rounded-0">
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Chat Box-->
+    <div class="col-7 px-0">
+      <div class="px-4 py-5 chat-box bg-white" style="
+    height: 550px;
+">
+        <div id="all_message">
+
+        </div>
+
+      </div>
+      <!-- Typing area -->
+      <form action="#" class="bg-light" id="messageForm">
+        <div class="input-group">
+          <input type="text"
+                 placeholder="Введите сообщение" aria-describedby="button-addon2"
+                 class="form-control rounded-0 border-0 py-4 bg-light"
+                 id="message"
+                 autocomplete="off"
+          >
+          <div class="input-group-append">
+            <button id="button-addon2" type="submit" class="btn btn-link"><i
+                class="fa fa-paper-plane"></i></button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<script src="/js/main.js"></script>
+</body>
+</html>

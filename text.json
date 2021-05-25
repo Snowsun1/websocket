@@ -1,0 +1,33 @@
+[
+
+[
+    {
+        "fromUser" : "Name",
+        "time": "00:00:00.00",
+        "message": "telegram"
+    },
+    {
+        "fromUser" : "Name",
+        "time": "",
+        "message": "whatsapp"
+    }
+]
+
+  ,
+
+[
+    {
+        "userName" : "name",
+        "isOnline" : true
+    },
+
+    {
+        "userName" : "name2",
+        "isOnline" : false
+    }
+]
+
+  ]
+
+
+
