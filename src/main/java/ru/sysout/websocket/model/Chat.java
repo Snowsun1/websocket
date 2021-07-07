@@ -3,8 +3,8 @@ package ru.sysout.websocket.model;
 import java.util.Date;
 
 public class Chat {
-    public String user; // TODO: Я наговнокодил и мне похуй
-    public Boolean is_online; // TODO: Мне воот вообще не кайф
+    public String user;
+    public Boolean is_online;
     public String message;
     public Date date;
 
